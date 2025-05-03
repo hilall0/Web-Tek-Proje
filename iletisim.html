@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <title>İletişim</title>
+    </head>
+    <body>
+        <header>
+            <h1>Bi yazı</h1>
+        </header>
+        <section>
+            <form id ="form1" method="post" onsubmit="return js_ile_kontrol()" enctype="multipart/form-data">
+                    <label for="adi">Adı:</label>
+                    <input type="text" id="adi" name="adi" placeholder="Adınız..."><br>
+
+                    <label for="soyadi">Soyadı:</label>
+                    <input type="text" id="soyadi" name="soyadi" placeholder="Soyadınız..."><br>
+
+                    <label for="telNo">Telefon No:</label>
+                    <input type="text" id="telNo" name="telNo" placeholder="Örn: 01234567890"><br>
+                
+                    <input type="radio" name="cinsiyet" value="erkek" id="erkek" checked>
+                    <label for="erkek">Erkek</label><br>
+                    <input type="radio" name="cinsiyet" value="kadin" id="kadin">
+                    <label for="kadin">Kadın</label><br>
+
+                    <label for="email">Email Adresi:</label>
+                    <input type="email" name="email" id="email" placeholder="ornek@eposta.com"><br>
+
+                    <input type="checkbox" name="bisey1" value="" id="bisey1"> 
+                    <label for="bisey1">Bişey</label>
+                    <input type="checkbox" name="bisey2" value="" id="bisey2"> 
+                    <label for="bisey2">Bişey</label><br>
+
+                    <textarea name="mesaj" id="mesaj" rows="5" cols="30" placeholder="bişeybişey"></textarea><br>
+
+                    <input type="text" list="okullar" id="okul" name="okul">
+                    <datalist id="okullar">
+                        <option value="an">ae</option>
+                        <option value="as">aa</option>
+                    </datalist><br> 
+
+                    <select name="">
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select><br>
+
+                    <input type="file" name="dosya" multiple><br>
+
+                    <input type="submit" value="Gönder">
+                    <input type="reset" value="Temizle">
+            </form>
+        </section>
+        <script>
+            function js_ile_kontrol(){
+                let email = document.getElementById("email").value;
+                let telNo = document.getElementById("telNo").value;
+                let rakamMi = telNo.split("");
+
+                if(!email.includes("@") || !email.includes(".")){
+                    alert("Geçerli formatta bir email giriniz!");
+                    return false;
+                }
+
+                if(document.getElementById("adi").value == "" || document.getElementById("soyadi").value == ""){
+                    alert("Adınızı ve soyadınızı giriniz!");
+                    return false;
+                }
+                
+                if(telNo == ""){
+                    alert("Telefon numaranızı doğru formatta giriniz!");
+                    return false;
+                }
+                else{
+                    if(rakamMi[0] != "0"){
+                        alert("Telefon numaranız 0 ile başlamalıdır!");
+                        return false;
+                    }
+                    else{
+                        for(let i = 0; i<rakamMi.length; i++){
+                            if(!("0123456789".includes(rakamMi[i]))){
+                                alert("Telefon numaranızı doğru formatta giriniz! Telefon numaranız boşluk içermemeli ve sadece rakam içermeli.");
+                                return false;
+                            }
+                        }
+                    }
+                }
+                
+                    document.getElementById("form1").action = "gonder.php";
+                    return true;
+                
+            }
+                    
+            
+        </script>
+    </body>
+</html>
