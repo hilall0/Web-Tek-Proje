@@ -1,8 +1,8 @@
 # Web Teknolojileri Projesi
 Bu proje Sakarya Üniversitesi  2024-2025 Web Teknolojileri dersi için geliştirilmiştir.
-# Proje Hakkında
+## Proje Hakkında
 Proje kapsamında 
-# Kullanılan Teknolojiler
+## Kullanılan Teknolojiler
 -HTML5
 -CSS
 -JavaScript
@@ -11,7 +11,7 @@ Proje kapsamında
 -Vue.js
 
 
-# Öğrenci Bilgileri
+## Öğrenci Bilgileri
 Adı: Hilal İrem
 Soyadı: Patan
 Numarası: b241210001
