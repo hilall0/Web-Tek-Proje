@@ -1,0 +1,38 @@
+
+          #ana-nav{
+            background-color: #f9f9f9;
+          }
+
+          .ana-link.active{
+            font-weight: bold;
+          }
+          .mirasimiz-sayfasi .ana-link.active, .mirasimiz-sayfasi .ana-link, .mirasimiz-sayfasi .ana-link:hover{
+            color: #198754 !important;
+          }
+          .login-sayfasi .ana-link.active, .login-sayfasi .ana-link, .login-sayfasi .ana-link:hover{
+            color: rgb(86, 196, 196) !important;
+          }
+          .hakkimda-sayfasi .ana-link.active, .hakkimda-sayfasi .ana-link, .hakkimda-sayfasi .ana-link:hover{
+            color:  #79b2fe !important;
+          }
+          .cv-sayfasi .ana-link.active, .cv-sayfasi .ana-link,.cv-sayfasi .ana-link:hover{
+            color:  #9eb48c !important;
+          }
+          .ilgialanlarim-sayfasi .ana-link.active, .ilgialanlarim-sayfasi .ana-link,.ilgialanlarim-sayfasi .ana-link:hover{
+            color:  #303030df !important;
+          }
+          .iletisim-sayfasi .ana-link.active, .iletisim-sayfasi .ana-link,.iletisim-sayfasi .ana-link:hover{
+            color:  #c397ba !important;
+          }
+          .sehrim-sayfasi .ana-link.active, .sehrim-sayfasi .ana-link,.sehrim-sayfasi .ana-link:hover{
+            color:  #52B9B7 !important;
+          }
+
+
+          .ana-link:hover{
+            font-weight: bold;
+          }
+          
+          .nav-item{
+            margin-right: 1rem;
+          }
