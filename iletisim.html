@@ -2,96 +2,61 @@
 <html lang="tr">
     <head>
         <meta charset="UTF-8">
-        <title>İletişim</title>
+        <title>Login Sayfası</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+
     </head>
-    <body>
+    <body class="login-sayfasi">
         <header>
-            <h1>Bi yazı</h1>
         </header>
+        <nav id="ana-nav" class="navbar navbar-expand-lg navbar-light">
+         <div class="container">
+          <div>
+            <a class="navbar-brand"><img src="img/Sakura.png" class="sakura"></a>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ana-navbar"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+         <div class="collapse navbar-collapse" id="ana-navbar">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link ana-link" href="index.html">Hakkımda</a></li>
+            <li class="nav-item"><a class="nav-link ana-link" href="cv.html">CV</a></li>
+            <li class="nav-item"><a class="nav-link ana-link" href="sehrim.html">Şehrim</a></li>
+            <li class="nav-item"><a class="nav-link ana-link" href="mirasimiz.html">Mirasımız</a></li>
+            <li class="nav-item"><a class="nav-link ana-link" href="ilgi_alanlarim.html">İlgi Alanlarım</a></li>
+            <li class="nav-item"><a class="nav-link ana-link" href="iletisim.html">İletişim</a></li>
+            <li class="nav-item"><a class="nav-link ana-link active" href="login.html">Login</a></li>
+          </ul>
+          </div>
+        </div>
+        </nav>
+          
         <section>
-            <form id ="form1" method="post" onsubmit="return js_ile_kontrol()" enctype="multipart/form-data">
-                    <label for="adi">Adı:</label>
-                    <input type="text" id="adi" name="adi" placeholder="Adınız..."><br>
-
-                    <label for="soyadi">Soyadı:</label>
-                    <input type="text" id="soyadi" name="soyadi" placeholder="Soyadınız..."><br>
-
-                    <label for="telNo">Telefon No:</label>
-                    <input type="text" id="telNo" name="telNo" placeholder="Örn: 01234567890"><br>
-                
-                    <input type="radio" name="cinsiyet" value="erkek" id="erkek" checked>
-                    <label for="erkek">Erkek</label><br>
-                    <input type="radio" name="cinsiyet" value="kadin" id="kadin">
-                    <label for="kadin">Kadın</label><br>
-
-                    <label for="email">Email Adresi:</label>
-                    <input type="email" name="email" id="email" placeholder="ornek@eposta.com"><br>
-
-                    <input type="checkbox" name="bisey1" value="" id="bisey1"> 
-                    <label for="bisey1">Bişey</label>
-                    <input type="checkbox" name="bisey2" value="" id="bisey2"> 
-                    <label for="bisey2">Bişey</label><br>
-
-                    <textarea name="mesaj" id="mesaj" rows="5" cols="30" placeholder="bişeybişey"></textarea><br>
-
-                    <input type="text" list="okullar" id="okul" name="okul">
-                    <datalist id="okullar">
-                        <option value="an">ae</option>
-                        <option value="as">aa</option>
-                    </datalist><br> 
-
-                    <select name="">
-                        <option value=""></option>
-                        <option value=""></option>
-                    </select><br>
-
-                    <input type="file" name="dosya" multiple><br>
-
-                    <input type="submit" value="Gönder">
-                    <input type="reset" value="Temizle">
-            </form>
+            <div class="container d-flex justify-content-center align-items-center" id="kutu-con">
+                <div class="kutu">
+                    <form method="post" action="php/login.php">
+                        <div class="mt-2 mb-3">
+                            <label for="kullanici_adi" class="form-label">Kullanıcı Adı </label>
+                            <input type="text" class="form-control rounded-pill" id="kullanici_adi" name="kullanici_adi" placeholder="b241210001@sakarya.edu.tr">
+                        </div>
+                        <div>
+                            <label for="sifre" class="form-label">Şifre </label>
+                            <input type="password" class="form-control rounded-pill" id="sifre" name="sifre" placeholder="b241210001">
+                        </div>
+                        <div class="mt-5">
+                            <input type="submit" class="btn btn-info rounded-pill" value="Giriş Yap">
+                        </div>
+                    </form>
+                </div>
+            </div>
         </section>
-        <script>
-            function js_ile_kontrol(){
-                let email = document.getElementById("email").value;
-                let telNo = document.getElementById("telNo").value;
-                let rakamMi = telNo.split("");
-
-                if(!email.includes("@") || !email.includes(".")){
-                    alert("Geçerli formatta bir email giriniz!");
-                    return false;
-                }
-
-                if(document.getElementById("adi").value == "" || document.getElementById("soyadi").value == ""){
-                    alert("Adınızı ve soyadınızı giriniz!");
-                    return false;
-                }
-                
-                if(telNo == ""){
-                    alert("Telefon numaranızı doğru formatta giriniz!");
-                    return false;
-                }
-                else{
-                    if(rakamMi[0] != "0"){
-                        alert("Telefon numaranız 0 ile başlamalıdır!");
-                        return false;
-                    }
-                    else{
-                        for(let i = 0; i<rakamMi.length; i++){
-                            if(!("0123456789".includes(rakamMi[i]))){
-                                alert("Telefon numaranızı doğru formatta giriniz! Telefon numaranız boşluk içermemeli ve sadece rakam içermeli.");
-                                return false;
-                            }
-                        }
-                    }
-                }
-                
-                    document.getElementById("form1").action = "gonder.php";
-                    return true;
-                
-            }
-                    
-            
-        </script>
     </body>
+        <footer>
+            <p class="footer">© 2025 Hilal İrem Patan</p>
+        </footer>
 </html>
