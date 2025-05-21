@@ -7,37 +7,6 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <link rel="stylesheet" href="css/style.css">
-
-        <style>
-          body{
-              background-image: url('img/tile2.png');
-              background-size: contain;
-              background-position: center;
-              background-repeat: repeat;
-          }
-          
-          #slider img{
-            height:60vh;
-            object-fit: cover;
-            width:100%;
-            display: block;
-          }
-          #slider {
-            width: 100%;
-            max-width: 1200px;
-          }
-          .carousel-inner {
-            width: 100%;
-          }
-          #bilgilendirme{
-
-            background-color: rgba(0, 0, 0, 0.669);
-          }
-          .bilgi{
-            color: #198754;
-          }
-
-        </style>
     </head>
     <body class="mirasimiz-sayfasi">
         <header>
@@ -46,7 +15,7 @@
         <nav id="ana-nav" class="navbar navbar-expand-lg navbar-light">
          <div class="container">
           <div>
-            <a class="navbar-brand"><img src="img/Sakura.png" alt=""></a>
+            <a class="navbar-brand"><img src="img/Sakura.png" alt="" class="sakura"></a>
           </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ana-navbar"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,7 +37,7 @@
         </nav>
 
           <div class="d-flex justify-content-center pt-4">            
-            <h2 style="font-family: Roboto; font-weight:bold;color:#f9f9f9"><img src="img/Museum.png" class="me-2" alt="">KOCAELİ ARKEOLOJİ MÜZESİ<img src="img/Museum.png" class="ms-2" alt=""></h2>
+            <h2 class="muze-baslik"><img src="img/Museum.png" class="me-2" alt="">KOCAELİ ARKEOLOJİ MÜZESİ<img src="img/Museum.png" class="ms-2" alt=""></h2>
           </div>
 
           <div class="container justify-content-center pt-md-3 pb-5">
@@ -78,7 +47,7 @@
       </div>
 
 
-          <div class="container-fluid" style="max-width:80%">
+          <div class="container-fluid" id="bilgi-liste">
           <nav id="bilgilendirme" class="navbar navbar-expand-lg">
             <div class="container-fluid">
               <ul class="nav">
@@ -96,7 +65,7 @@
 
           <div data-bs-spy="scroll" data-bs-target="#bilgilendirme" data-bs-offset="50" tabindex="0">
 
-            <div id="bilgi1" class="container-fluid bg-success text-white" style="padding:60px 20px;">
+            <div id="bilgi1" class="container-fluid bg-success text-white">
               <h2>Müzenin Tarihçesi</h2>
               <p>Kocaeli Arkeoloji Müzesi, köklü bir geçmişe ve dikkat çekici bir dönüşüm sürecine sahip önemli bir kültür mirasıdır. 
                 Müzenin bulunduğu yapı, aslında Osmanlı İmparatorluğu döneminde inşa edilmiş tarihi bir gar binasıdır. 19. yüzyılın sonlarına doğru yapıldığı bilinen bu bina, 
@@ -115,7 +84,7 @@
                 yaparak bölgenin tarihsel katmanlarını gözler önüne sermektedir.</p>
             </div>
 
-            <div id="bilgi2" class="container-fluid bg-warning" style="padding:60px 20px;">
+            <div id="bilgi2" class="container-fluid bg-warning">
               <h2>Konumu ve Mimari Yapısı</h2>
               <p>Kocaeli Arkeoloji Müzesi, Kocaeli’nin kalbi olan İzmit ilçesinde, şehrin tarihî dokusunu taşıyan en özel bölgelerden birinde yer almaktadır. 
                 Müze, İzmit’in simgelerinden biri hâline gelmiş olan tarihi tren garı binasında konumlanmıştır. 
@@ -137,7 +106,7 @@
 
             
             
-            <div id="bilgi3" class="container-fluid bg-secondary text-white" style="padding:60px 20px;">
+            <div id="bilgi3" class="container-fluid bg-secondary text-white">
               <h2>Müze Eserleri</h2>
               <p>Müze, Osmanlı döneminden Cumhuriyet’e uzanan geniş bir zaman dilimini kapsayan eserleriyle dikkat çeker. İçerisinde:
                   <ul>
@@ -152,7 +121,7 @@
                    Her bir eser, dönemin sosyal hayatı, zanaatları ve kültürel değerleri hakkında ziyaretçilere bilgi verir.</p>
             </div>
 
-            <div id="bilgi4" class="container-fluid bg-info" style="padding:60px 20px;">
+            <div id="bilgi4" class="container-fluid bg-info">
               <h2>Müze Düzeni</h2>
               <p>Müze, arkeolojik eserlerin kronolojik sırayla ve tematik olarak sergilendiği düzenli bir yapıya sahiptir. 
                 Girişten itibaren ziyaretçiler Prehistorik Dönemlerden başlayarak Roma, Bizans ve Osmanlı dönemlerine kadar uzanan geniş bir zaman dilimini takip eder.
@@ -179,7 +148,7 @@
                 </ol>
 </p>
             </div>
-            <div id="bilgi5" class="container-fluid bg-danger text-white" style="padding:60px 20px;">
+            <div id="bilgi5" class="container-fluid bg-danger text-white">
               <h2>Konum ve Ziyaret Bilgileri</h2>
               <p>Müze, İzmit merkezde, tarihi Saat Kulesi ve diğer önemli yapılarla aynı bölgede yer alır. 
                   Ulaşımı oldukça kolay olan müze, haftanın belirli günleri ziyarete açıktır ve girişler genellikle ücretsiz ya da düşük ücretlidir.<br>
@@ -239,5 +208,8 @@
 
         
     </body>
+        <footer>
+            <p class="footer">© 2025 Hilal İrem Patan</p>
+        </footer>
 
 </html>
