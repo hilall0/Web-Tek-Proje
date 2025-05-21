@@ -2,14 +2,13 @@
           #ana-nav{
             background-color: #f9f9f9;
           }
-
           .ana-link.active{
             font-weight: bold;
           }
           .mirasimiz-sayfasi .ana-link.active, .mirasimiz-sayfasi .ana-link, .mirasimiz-sayfasi .ana-link:hover{
             color: #198754 !important;
           }
-          .login-sayfasi .ana-link.active, .login-sayfasi .ana-link, .login-sayfasi .ana-link:hover{
+          .login-sayfasi .ana-link.active, .login-sayfasi .ana-link, .login-sayfasi .ana-link:hover,.login-sayfasi-php .ana-link.active, .login-sayfasi-php .ana-link, .login-sayfasi-php .ana-link:hover{
             color: rgb(86, 196, 196) !important;
           }
           .hakkimda-sayfasi .ana-link.active, .hakkimda-sayfasi .ana-link, .hakkimda-sayfasi .ana-link:hover{
@@ -21,13 +20,292 @@
           .ilgialanlarim-sayfasi .ana-link.active, .ilgialanlarim-sayfasi .ana-link,.ilgialanlarim-sayfasi .ana-link:hover{
             color:  #303030df !important;
           }
-          .iletisim-sayfasi .ana-link.active, .iletisim-sayfasi .ana-link,.iletisim-sayfasi .ana-link:hover{
+          .iletisim-sayfasi .ana-link.active, .iletisim-sayfasi .ana-link,.iletisim-sayfasi .ana-link:hover,
+          .iletisim-sayfasi-php .ana-link.active, .iletisim-sayfasi-php .ana-link,.iletisim-sayfasi-php .ana-link:hover{
             color:  #c397ba !important;
           }
           .sehrim-sayfasi .ana-link.active, .sehrim-sayfasi .ana-link,.sehrim-sayfasi .ana-link:hover{
             color:  #52B9B7 !important;
           }
 
+          body.sehrim-sayfasi{
+                background-image: url('../img/turq.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+          }
+          .sehrim-sayfasi .kutu{
+                backdrop-filter: blur(15px); 
+                border: 1px solid rgb(21, 125, 125);
+                padding: 40px;
+                color: rgb(0, 9, 9);
+                border-radius: 20px;
+                margin-top: 60px;
+                margin-bottom: 100px;
+            }
+
+          .sehrim-sayfasi .carousel-item {
+            max-height: 700px;
+            height:100%;
+          }
+          .sehrim-sayfasi .carousel-item img {
+            height: 100%;
+            object-fit: cover;
+          }
+          .sehrim-sayfasi .card {
+            max-width: 550px;
+          }
+          .sehrim-sayfasi iframe{
+             border: 0;
+          }
+          .sehrim-sayfasi .kocaeli-link{
+            color:rgb(159, 87, 226);
+          }
+          .sehrim-sayfasi .card-body , .card-header{
+                background-color: #F9E79F ;
+            }
+
+
+
+          body.mirasimiz-sayfasi{
+              background-image: url('../img/tile2.png');
+              background-size: contain;
+              background-position: center;
+              background-repeat: repeat;
+          }
+          .mirasimiz-sayfasi #slider img{
+            max-height:60vh;
+            height:auto;
+            object-fit: cover;
+            width:100%;
+            display: block;
+          }
+          .mirasimiz-sayfasi #slider {
+            width: 100%;
+            max-width: 1200px;
+          }
+          .mirasimiz-sayfasi #bilgilendirme{
+            background-color: rgba(0, 0, 0, 0.669);
+          }
+
+          .mirasimiz-sayfasi .bilgi{
+            color: #198754;
+          }
+          .mirasimiz-sayfasi .muze-baslik{
+            font-family: Roboto; 
+            font-weight:bold;
+            color:#f9f9f9
+          }
+          .mirasimiz-sayfasi #bilgi-liste{
+            max-width:80%;
+          }
+          .mirasimiz-sayfasi #bilgi1, #bilgi2, #bilgi3, #bilgi4, #bilgi5{
+            padding:60px 20px;
+          }
+
+          body.login-sayfasi{
+            background-image: url('../img/bg.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                overflow-y: hidden;
+                overflow-x: auto;
+          }
+          .login-sayfasi .kutu{
+                backdrop-filter: blur(10px); 
+                border: 1px solid rgb(86, 196, 196);
+                padding: 40px;
+                margin-top: -50px;
+                border-radius: 20px;
+                max-width: 320px;
+                width:100%;
+                height:auto;
+          }
+          .login-sayfasi #kutu-con{
+                min-height: 90vh;
+            }
+
+          
+          body.hakkimda-sayfasi{
+              background-image: url('../img/blueback.jpg');
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+          }
+          .hakkimda-sayfasi .kutu{
+                backdrop-filter: blur(20px); 
+                border: 1px solid #a9ccfa;
+                padding: 40px;
+                color: rgb(0, 9, 9);
+                border-radius: 20px;
+                margin-top: 60px;
+                margin-bottom: 100px;
+            }
+            .hakkimda-sayfasi .card-body , .card-header{
+                background-color: #FFFDF5 ;
+            }
+            .hakkimda-sayfasi .card .btn{
+                background-color: #954da0;
+            }
+            .hakkimda-sayfasi .card{
+                width: 100%; 
+                max-width: 500px;
+            }
+            .hakkimda-sayfasi #dil, .hakkimda-sayfasi #sozluk , .mirasimiz-sayfasi .carousel-inner{
+                width:100%
+            }
+            .hakkimda-sayfasi #seyahat{
+                width:80%
+            }
+            .hakkimda-sayfasi #bulmaca, .hakkimda-sayfasi #okuma{
+                width:60%;
+                height:50vh;
+            }
+            .hakkimda-sayfasi #harita{
+                width:100%;
+                height:50vh;
+            }
+            
+            body.ilgialanlarim-sayfasi{
+              background-image: url('../img/movie.png');
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+            }
+            .ilgialanlarim-sayfasi .baslik{
+              color: white;
+              background-color: rgba(0, 0, 0, 0.5); 
+              background-size: contain;
+            }
+
+            
+            body.iletisim-sayfasi{
+                background-image: url('../img/backg.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+
+            }
+            .iletisim-sayfasi .kutu{
+                backdrop-filter: blur(15px); 
+                border: 1px solid rgb(86, 196, 196);
+                padding: 40px;
+                color: rgb(0, 9, 9);
+                border-radius: 20px;
+                margin-top: 80px;
+                margin-bottom: 100px;
+                max-width:700px;
+                width: 100%;
+            }
+            .iletisim-sayfasi #kutu-form{
+                min-height: 100vh;
+            }
+
+            
+            body.cv-sayfasi{
+                background-image: url('../img/backg1.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+
+            }
+            .cv-sayfasi .kutu{
+                backdrop-filter: blur(15px); 
+                border: 1px solid rgb(86, 196, 196);
+                padding: 40px;
+                color: rgb(0, 9, 9);
+                border-radius: 20px;
+                margin-top: 80px;
+                margin-bottom: 100px;
+                max-width:900px;
+                width:100%;
+            }
+            .cv-sayfasi #kutu-cv{
+              min-height: 100vh;
+            }
+            .cv-sayfasi .progress{
+              width: 80px;
+            }
+            .cv-sayfasi #ing{
+              width:90%;
+            }
+            .cv-sayfasi .progress-bar{
+              width:60%;
+            }
+
+
+            
+            body.login-sayfasi-php{
+                background-image: url('../img/bg.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                overflow-y: hidden;
+                overflow-x: auto;
+
+            }
+            .login-sayfasi-php .kutu{
+                backdrop-filter: blur(10px); 
+                border: 1px solid rgb(86, 196, 196);
+                padding: 40px;
+                margin-top: -50px;
+                border-radius: 20px;
+                max-width:320px;
+                width: 100%;
+                height:auto;
+                text-align: center;
+            }
+            .login-sayfasi-php #kutu-log{
+              min-height: 90vh;
+            }
+
+            
+            body.iletisim-sayfasi-php{
+                background-image: url('../img/backg.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                overflow-y: hidden;
+                overflow-x: auto;
+
+            }
+            .iletisim-sayfasi-php .kutu{
+                backdrop-filter: blur(15px); 
+                border: 1px solid rgb(86, 196, 196);
+                padding: 40px;
+                color: rgb(0, 9, 9);
+                border-radius: 20px;
+                margin-top: 80px;
+                margin-bottom: 70px;
+                max-width:500px;
+                width: 100%;
+                text-align:center;
+            }
+            .iletisim-sayfasi-php #kutu-gonder{
+                min-height: 90vh;
+            }
+
+
+          .ilgialanlarim-sayfasi .footer{
+            color: white;
+          }
+          .login-sayfasi .footer, .login-sayfasi-php .footer{
+            color: rgb(90, 5, 53);
+          }
+          .footer{
+            margin-left: 5px;
+            font-weight: bold;
+          }
+
+          .popcorn{
+          max-width: 100%;
+          height: auto;
+        }
+
+          .sakura{
+          max-width: 100%;
+          height: auto;
+          }
 
           .ana-link:hover{
             font-weight: bold;
