@@ -6,51 +6,44 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-        <style>
-            body{
-                background-image: url('img/back.jpg');
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-
-            }
-            .kutu{
-                backdrop-filter: blur(15px); 
-                border: 1px solid rgb(86, 196, 196);
-                padding: 40px;
-                color: rgb(0, 9, 9);
-                border-radius: 20px;
-                margin-top: 60px;
-                margin-bottom: 100px;
-            }
-        </style>
-
+        <link rel="stylesheet" href="css/style.css">
     </head>
-    <body>
+    <body class="hakkimda-sayfasi">
         <header>
+            
         </header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid d-flex justify-content-center">
-                        <ul class="nav">
-                            <li class="nav-item"><a class="nav-link active" href="#">Hakkımda</a></li>
-                            <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-                            <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
-                            <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasımız</a></li>
-                            <li class="nav-item"><a class="nav-link" href="ilgi_alanlarim.html">İlgi Alanlarım</a></li>
-                            <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
-                            <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                        </ul>
-                    </div>
-                </nav>
+            <nav id="ana-nav" class="navbar navbar-expand-lg navbar-light">
+         <div class="container">
+          <div>
+            <a class="navbar-brand"><img src="img/Sakura.png" class="sakura"></a>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ana-navbar"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <div class="container mt-4">
+         <div class="collapse navbar-collapse" id="ana-navbar">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link ana-link active" href="index.html">Hakkımda</a></li>
+            <li class="nav-item"><a class="nav-link ana-link" href="cv.html">CV</a></li>
+            <li class="nav-item"><a class="nav-link ana-link" href="sehrim.html">Şehrim</a></li>
+            <li class="nav-item"><a class="nav-link ana-link" href="mirasimiz.html">Mirasımız</a></li>
+            <li class="nav-item"><a class="nav-link ana-link" href="ilgi_alanlarim.html">İlgi Alanlarım</a></li>
+            <li class="nav-item"><a class="nav-link ana-link" href="iletisim.html">İletişim</a></li>
+            <li class="nav-item"><a class="nav-link ana-link" href="login.html">Login</a></li>
+          </ul>
+          </div>
+        </div>
+        </nav>
+            <h2 class="container d-flex justify-content-center align-items-center pt-5"><img src="img/Flower.png" alt="">Merhaba, Ben Hilal! Websiteme Hoş Geldiniz!<img src="img/Flower.png" alt=""></h2>
+        <div class="container">
             <div class="kutu">
+                <h4 class="container d-flex justify-content-center align-items-center mb-3">Hobilerim ve İlgi Alanlarım</h4>
         <section>
-            <h2 class="container d-flex justify-content-center">Merhaba, Ben Hilal! Websiteme Hoş Geldiniz!</h2>
             <div class="row gx-0 align-items-center mb-3">
-                <div class="col-md-6">
-                <div class="card w-50 mx-auto shadow-lg">
-                <div class="card-header"><img src="img/Language.png" class="img-fluid rounded shadow me-2">Yabancı Dil Öğrenmek</div>
+                <div class="col-12 col-md-6">
+                <div class="card mx-auto shadow-lg">
+                <div class="card-header"><img src="img/Language.png" class="img-fluid rounded shadow me-2" alt="">Yabancı Dil Öğrenmek</div>
                 <div class="card-body">Yabancı dil öğrenmek benim için sadece iletişim kurma aracı değil, 
                     aynı zamanda farklı kültürlerin kapılarını aralamak gibi. Her yeni kelime, 
                     bir milletin düşünce biçimine dair ipuçları taşıyor. 
@@ -60,17 +53,17 @@
                 </div>
                 </div>
                 <div class="col-md-6 mt-3">
-                    <img src="img/lang.jpg"  class="img-fluid rounded shadow-lg" style="width:100%">
+                    <img src="img/lang.jpg"  class="img-fluid rounded shadow-lg" id="dil" alt="Yabancı dil kitapları">
                 </div>
             </div>
 
             <div class="row gx-0 align-items-center mb-3">
                 <div class="col-md-6 mt-3">
-                    <img src="img/travel.jpg"  class="img-fluid rounded shadow-lg ms-2" style="width:80%">
+                    <img src="img/travel.jpg"  class="img-fluid rounded shadow-lg ms-2" id="seyahat" alt="Haritayla seyahat planlayan bir kadın">
                 </div>
-                <div class="col-md-6">
-                <div class="card w-50 mx-auto shadow-lg">
-                <div class="card-header"><img src="img/Airplane.png" class="img-fluid rounded shadow me-2">Seyahat Etmek</div>
+                <div class="col-12 col-md-6 mt-3">
+                <div class="card mx-auto shadow-lg">
+                <div class="card-header"><img src="img/Airplane.png" class="img-fluid rounded shadow me-2" alt="">Seyahat Etmek</div>
                 <div class="card-body">Yeni yerler görmek, farklı coğrafyaları ve yaşam tarzlarını deneyimlemek beni her zaman heyecanlandırıyor. 
                     Seyahat ederken sadece manzaralar değil, insanlar, yemekler, sokaklar ve küçük detaylar bile bana ilham veriyor. 
                     Gittiğim her şehirde mutlaka harita açıp sokak sokak keşfetmeyi seviyorum.</div>
@@ -79,11 +72,10 @@
                 </div>
             </div>
 
-
             <div class="row gx-0 align-items-center mb-3">
-                <div class="col-md-6">
-                <div class="card w-50 mx-auto shadow-lg">
-                <div class="card-header"><img src="img/Parchment.png" class="img-fluid rounded shadow me-2">Etimoloji</div>
+                <div class="col-12 col-md-6">
+                <div class="card mx-auto shadow-lg">
+                <div class="card-header"><img src="img/Parchment.png" class="img-fluid rounded shadow me-2" alt="">Etimoloji</div>
                 <div class="card-body">Kelimelerin kökenlerini araştırmak, dillerin geçmişine bir yolculuk yapmak gibi geliyor bana. 
                     Bir kelimenin zaman içinde nasıl evrildiğini, hangi dillerden geldiğini öğrenmek benim için küçük bir tarih keşfi gibi. 
                     Etimoloji sayesinde dil öğrenmek çok daha derin ve anlamlı hale geliyor.</div>
@@ -91,18 +83,17 @@
                 </div>
                 </div>
                 <div class="col-md-6 mt-3">
-                    <img src="img/etymology.jpg" class="img-fluid rounded shadow-lg" style="width:100%">
+                    <img src="img/etymology.jpg" class="img-fluid rounded shadow-lg" id="sozluk" alt="Bir sözlük">
                 </div>
             </div>
             
-
             <div class="row gx-0 align-items-center mb-3">
                 <div class="col-md-6 mt-3">
-                    <img src="img/crossword.jpg" class="img-fluid rounded shadow-lg ms-5" style="width:60%;height:50vh">
+                    <img src="img/crossword.jpg" class="img-fluid rounded shadow-lg ms-5" id="bulmaca" alt="Bulmaca çözen adam">
                 </div>
-                <div class="col-md-6">
-                <div class="card w-50 mx-auto shadow-lg ms-5">
-                <div class="card-header"><img src="img/Rubik's Cube.png" class="img-fluid rounded shadow me-2">Bulmacalar</div>
+                <div class="col-12 col-md-6 mt-3">
+                <div class="card mx-auto shadow-lg">
+                <div class="card-header"><img src="img/Rubik's Cube.png" class="img-fluid rounded shadow me-2" alt="">Bulmacalar</div>
                 <div class="card-body">Boş vakitlerimde bulmaca çözmek benim için eğlenceli bir beyin egzersizi. 
                     Özellikle yapbozlarla ve kelime oyunlarıyla uğraşmak, hem rahatlamamı sağlıyor hem de zihinsel olarak aktif kalmamı. </div>
                     <a href="https://artsandculture.google.com/experiment/cultural-crosswords/JgGaXxGHVxpn4A?hl=en" target="_blank" class="btn btn-secondary">Google Arts&Culture Bulmaca Sitesi</a>
@@ -110,11 +101,10 @@
                 </div>
             </div>
 
-
             <div class="row gx-0 align-items-center mb-3">
-                <div class="col-md-6">
-                <div class="card w-50 mx-auto shadow-lg">
-                <div class="card-header"><img src="img/Reading.png" class="img-fluid rounded shadow me-2">Kitap Okumak</div>
+                <div class="col-12 col-md-6 mt-3">
+                <div class="card mx-auto shadow-lg">
+                <div class="card-header"><img src="img/Reading.png" class="img-fluid rounded shadow me-2" alt="">Kitap Okumak</div>
                 <div class="card-body">Kitaplar benim hem kaçış alanım hem de keşif rotam. 
                     Farklı türlerde okumayı seviyorum; bazen bir romanın dünyasında kaybolmak, 
                     bazen de bir düşünce kitabında saatler geçirmek bana çok iyi geliyor. 
@@ -123,18 +113,17 @@
                 </div>
                 </div>
                 <div class="col-md-6 mt-3">
-                    <img src="img/reading.jpg" class="img-fluid rounded shadow-lg ms-5" style="width:60%;height:50vh">
+                    <img src="img/reading.jpg" class="img-fluid rounded shadow-lg ms-5" id="okuma" alt="Kitap ve gözlük fotoğrafı">
                 </div>
             </div>
 
-
             <div class="row gx-0 align-items-center mb-3">
                 <div class="col-md-6 mt-3">
-                    <img src="img/maps.jpg" class="img-fluid rounded shadow-lg" style="width:100%;height:50vh">
+                    <img src="img/maps.jpg" class="img-fluid rounded shadow-lg" id="harita" alt="Birçok farklı harita">
                 </div>
-                <div class="col-md-6">
-                <div class="card w-50 mx-auto shadow-lg">
-                <div class="card-header"><img src="img/World Map Continents.png" class="img-fluid rounded shadow me-2">Coğrafya ve Haritalar</div>
+                <div class="col-12 col-md-6 mt-3">
+                <div class="card mx-auto shadow-lg">
+                <div class="card-header"><img src="img/World Map Continents.png" class="img-fluid rounded shadow me-2" alt="">Coğrafya ve Haritalar</div>
                 <div class="card-body">Küçüklüğümden beri haritalar beni büyülemiştir. 
                     Bir ülkenin sınırlarına, bir şehrin sokaklarına ya da bir kıtanın şekline bakmak bile heyecan verici geliyor. 
                     Coğrafya sadece yer bilgisi değil, kültürlerin, tarihlerin ve doğal güzelliklerin kesişim noktası benim için. 
@@ -148,7 +137,7 @@
         </div>
         </div>
         <footer>
-            <p>© 2025 Hilal İrem Patan</p>
+            <p class="footer">© 2025 Hilal İrem Patan</p>
         </footer>
     </body>
 </html>
