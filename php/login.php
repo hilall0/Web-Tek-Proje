@@ -1,67 +1,62 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
   <title>Login Sonucu</title>
-  <link rel="stylesheet" href="../style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-            body{
-                background-image: url('../img/back.jpg');
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                overflow-y: hidden;
-                overflow-x: auto;
-
-            }
-            .kutu{
-                backdrop-filter: blur(10px); 
-                border: 1px solid rgb(86, 196, 196);
-                padding: 40px;
-                margin-top: -50px;
-                border-radius: 20px;
-                width:30vh;
-                height:18vh;
-                text-align:center;
-            }
-            </style>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid d-flex justify-content-center">
-              <ul class="nav">
-                <li class="nav-item"><a class="nav-link" href="index.html">Hakkımda</a></li>
-                <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-                <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
-                <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasımız</a></li>
-                <li class="nav-item"><a class="nav-link" href="ilgi_alanlarim.html">İlgi Alanlarım</a></li>
-                <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
-                <li class="nav-item"><a class="nav-link active" href="login.html">Login</a></li>
-              </ul>
-            </div>
-          </nav>
+<body class="login-sayfasi-php">
+<nav id="ana-nav" class="navbar navbar-expand-lg navbar-light">
+         <div class="container">
+          <div>
+            <a class="navbar-brand"><img src="../img/Sakura.png" class=sakura></a>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ana-navbar"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+         <div class="collapse navbar-collapse" id="ana-navbar">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link ana-link" href="../index.html">Hakkımda</a></li>
+            <li class="nav-item"><a class="nav-link ana-link" href="../cv.html">CV</a></li>
+            <li class="nav-item"><a class="nav-link ana-link" href="../sehrim.html">Şehrim</a></li>
+            <li class="nav-item"><a class="nav-link ana-link" href="../mirasimiz.html">Mirasımız</a></li>
+            <li class="nav-item"><a class="nav-link ana-link" href="../ilgi_alanlarim.html">İlgi Alanlarım</a></li>
+            <li class="nav-item"><a class="nav-link ana-link" href="../iletisim.html">İletişim</a></li>
+            <li class="nav-item"><a class="nav-link ana-link active" href="../login.html">Login</a></li>
+          </ul>
+          </div>
+        </div>
+        </nav>
 
           
-    <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="container d-flex justify-content-center align-items-center" id="kutu-log">
         <div class="kutu">
     <?php
-        $dogru_kullanici = "b241210001@ogr.sakarya.edu.tr";
+        $dogru_kullanici = "b241210001@sakarya.edu.tr";
         $dogru_sifre = "b241210001";
         if($_POST['kullanici_adi'] == '' || $_POST['sifre'] == ''){
-            echo "Kullanıcı adı ve şifre alanlarını boş bırakmayınız!";
+            echo "<b>Kullanıcı adı ve şifre alanlarını boş bırakmayınız!</b>";
             echo "<a href ='../login.html'> <br>Giriş Sayfasına Geri Dön</a>";
         }
         elseif(!filter_var($_POST['kullanici_adi'], FILTER_VALIDATE_EMAIL)){
-            echo "Kullanıcı adınız mail adresi formatında olmalıdır.";
+            echo "<b>Kullanıcı adınız mail adresi formatında olmalıdır.</b>";
             echo "<a href ='../login.html'> <br>Giriş Sayfasına Geri Dön</a>";
         }
         elseif($_POST['kullanici_adi'] == $dogru_kullanici && $_POST['sifre'] == $dogru_sifre){
-            echo "Giriş Başarılı! Hoşgeldiniz" . $_POST['kullanici_adi'];
+            echo "<b>Giriş Başarılı!<br> Hoşgeldiniz<br>" . $_POST['kullanici_adi'] . "</b>";
+        }
+        else{
+          echo "<b>Tekrar deneyiniz!</b>";
+            echo "<a href ='../login.html'> <br>Giriş Sayfasına Geri Dön</a>";
         }
     ?>
   </div>
   </div>
 </body>
+        <footer>
+            <p class="footer">© 2025 Hilal İrem Patan</p>
+        </footer>
 </html>
